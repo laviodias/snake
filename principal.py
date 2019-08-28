@@ -121,6 +121,11 @@ def game():
             #SCOREBOARD
             pygame.draw.rect(functions.background, functions.black, [0, functions.height - functions.score_height, functions.width, functions.score_height])
             functions.text('Score: '+str(points), functions.white, 20, 10, functions.height-27)
+            
+             #BOARDS (UP, LEFT, RIGHT)
+            pygame.draw.rect(functions.background, functions.black,[0,0,functions.width, 1])
+            pygame.draw.rect(functions.background, functions.black,[0,0,1, functions.height])
+            pygame.draw.rect(functions.background, functions.black,[functions.width-1, 0, 1, functions.height])
 
             functions.snake(snakeXY)
             functions.apple(apple_x, apple_y)
